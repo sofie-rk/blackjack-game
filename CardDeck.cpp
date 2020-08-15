@@ -37,7 +37,7 @@ void CardDeck::shuffle() {
 
 Card CardDeck::drawCard() {
 
-    Card c = cards[-1];
+    Card c = cards.back();
     cards.pop_back();
 
     return c;
