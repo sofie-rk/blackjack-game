@@ -6,16 +6,16 @@
 
 // This program outputs the message "Hello, World!" to the monitor
 
-#include "std_lib_facilities.h"
+#include "Blackjack.h"
 
 //------------------------------------------------------------------------------'
 
 // C++ programs start by executing the function main
 int main()
 {
-	cout << "Hello, World!\n";
-
-	keep_window_open();
+	srand(static_cast<unsigned int>(time(nullptr)));
+	
+	
 }
 
 //------------------------------------------------------------------------------
