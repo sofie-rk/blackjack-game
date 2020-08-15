@@ -41,7 +41,6 @@ int Blackjack::getCardValueDealer(Card c) {
 }
 
 void Blackjack::playerDraw() {
-    // Draw card and adds card-value to playerSum
     Card cardDrew = cardDeck.drawCard();
     std::cout << "You got: " << cardDrew.toString() << "\n";
     playerHand.push_back(cardDrew);
@@ -49,7 +48,6 @@ void Blackjack::playerDraw() {
 }
 
 void Blackjack::dealerDraw() {
-    // Draw card and adds card-value to dealerSum
     Card cardDrew = cardDeck.drawCard();
     dealerHand.push_back(cardDeck.drawCard());
     dealerSum += getCardValueDealer(cardDrew);
@@ -106,7 +104,7 @@ void Blackjack::playBlackjack() {
         std::cout << "Dealer got blackjack.\n";
         win = false;
     } else if (playerSum == 21 && playerHand.size() == 2) {
-        std::cout << "Player god blackjack. \n";
+        std::cout << "Player got blackjack. \n";
     } else if (dealerSum <= 21 && dealerSum > playerSum) {
         std::cout << "Dealer beat the player. \n";
         win = false;
@@ -116,8 +114,6 @@ void Blackjack::playBlackjack() {
         std::cout << "Draw.";
         win = false;
     }
-
-
 
     if (win) {
         std::cout << "You won! \n";

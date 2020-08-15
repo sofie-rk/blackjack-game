@@ -11,13 +11,8 @@ int main()
 
 	Blackjack blackjack;
 
-	CardDeck cd;
-
-	
-
 	blackjack.playBlackjack();
 	
-
 }
 
 //------------------------------------------------------------------------------
